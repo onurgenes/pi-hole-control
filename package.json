@@ -1,0 +1,67 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "pi-hole-controls",
+  "title": "Pi-Hole Controls",
+  "description": "Control you Pi-Hole directly from Raycast",
+  "icon": "command-icon.png",
+  "author": "Raycast",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "disable-pi-hole-5-minutes",
+      "title": "Disable Pi-Hole (5 minutes)",
+      "subtitle": "Disable Pi-Hole (5 minutes)",
+      "description": "Disable Pi Hole for 5 Minutes",
+      "mode": "view"
+    },
+    {
+      "name": "disable-pi-hole-30-minutes",
+      "title": "Disable Pi Hole (30 Minutes)",
+      "subtitle": "Disable Pi-Hole (30 minutes)",
+      "description": "Disable Pi Hole for 30 Minutes",
+      "mode": "view"
+    },
+    {
+      "name": "disable-pi-hole-1-hour",
+      "title": "Disable Pi Hole (1 Hour)",
+      "subtitle": "Disable Pi Hole (1 Hour)",
+      "description": "Disable Pi Hole for 1 Hour",
+      "mode": "view"
+    },
+    {
+      "name": "enable-pihole",
+      "title": "Enable Pi Hole",
+      "subtitle": "Enable Pi Hole",
+      "description": "Enable Pi Hole",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "apiKey",
+      "type": "password",
+      "title": "API-key",
+      "required": true,
+      "default": "",
+      "description": "Pi Hole API Key"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.25.4",
+    "axios": "^0.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "@types/react": "^17.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "react-devtools": "^4.19.2",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop"
+  }
+}
